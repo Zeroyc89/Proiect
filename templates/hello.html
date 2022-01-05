@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body background = "./templates/background.jfif">
+    <form action="http://127.0.0.1:5000/resultSet" method="post">
+        <table border="0" cellspacing="" cellpadding="" align="center">
+            基金类型：
+            <select name="selectList">
+                <option value = "all">全部</option>
+                <option value = "gp"> 股票型</option>
+                <option value = "hh">混合型</option>
+                <option value = "zq">债券型</option>
+                <option value = "zs">指数型</option>
+            </select>
+            <br>
+            &nbsp&nbsp&nbsp精&nbsp度&nbsp&nbsp&nbsp<input type="text" name = "precision"><br>
+            &nbsp&nbsp&nbsp范&nbsp围&nbsp&nbsp&nbsp<input type="text" name = "result_seg"><br>
+            起始年份<input type="text" name = "begin"><br>
+            终止年份<input type="text" name = "end"><br>
+            是否将历年最优区间基金输出为excel文件:&nbsp
+                            <input type="radio" id = "radioA" name = "excel" value="1">
+                            <label for = "radioA">是</label>
+                            &nbsp&nbsp&nbsp
+                            <input type="radio" id = "radioB" name = "excel" value="0">
+                            <label for = "radioB">否</label><br>
+            文件名为<input type="text" name = "excelName">（默认路径为D盘，请确保无同名文件）<br>
+            <input type="submit" name = "确定"> <br>
+            （提示：爬取需要几分钟时间，请耐心等待）
+        </table>
+    </form>
+</body>
+<!--
+<style type="text/css">
+	body{
+		background:url(./images/background.jfif)
+		no-repeat center center;
+        background-size:cover;
+        background-attachment:fixed;
+        background-color:#CCCCCC;
+	}
+</style>
+-->
+</html>
+
